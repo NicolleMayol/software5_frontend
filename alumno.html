@@ -111,32 +111,54 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <input class=" contactus" placeholder="Nombre" type="text" name="Nombre">
+                                <input class=" contactus" placeholder="Nombre*" type="text" name="Nombre" id = "nombre" required>
                             </div>
+                            
                             <div class="col-md-12">
-                                <label class=labelsign></label>
-                                <div class="nice-select"><span class="current">Tipo de Documento</span>
-                                    <ul class="list">
-                                        <li class="option" data-value="cc">CC</li>
-                                        <li class="option" data-value="ce">CE</li>
-                                        <li class="option" data-value="Otro">Otro</li>
-                                    </ul>
-                                </div>
+                                <input class="contactus" placeholder="Documento*" type="text" name="Documento*" id="documento" required>
                             </div>
+
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Documento" type="text" name="Documento" id="documento" required>
+                                <label> Fecha Nacimiento*</label>
+                                <input class="contactus" placeholder="fechaNacimiento" type="date" name="Fecha Nacimiento*" id="fechaNacimiento" required>
                             </div>
+
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Email" type="email" name="Email" id="email" required>
+                                <input class="contactus" placeholder="Email*" type="email" name="Email*" id="email" required>
                             </div>
+                          
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Teléfono" type="tel" name="Telefono" id = "telefono" required>
+                                <input class="contactus" placeholder="Teléfono*" type="tel" name="Telefono*" id = "telefono" required>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                <button class="send">Registrar</button>
+                                <button type="button" class="send" onclick="crearAlumno()">Registrar</button>
                             </div>
                     </div>
                     </form>
+
+                    <div  class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="margin-top: 100px">
+
+                        <table class="table">
+            
+                            <div>
+                                <thead>
+                                    <tr>
+            
+                                        <th scope="col">Documento</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Telefono</th>
+                                        <th scope="col">Eliminar</th>
+            
+                                    </tr>
+                                </thead>
+                                <tbody id="listaAlumnos">
+            
+                                </tbody>
+                        </table>
+                    </div>
+
+
 
                 </div>
             </div>
@@ -244,35 +266,11 @@
         <script src="js/custom.js"></script>
         <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/js/alumno.js"></script>
+  
 
-        <script>
-            // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-            // Australia.
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 11,
-                    center: {
-                        lat: 40.645037,
-                        lng: -73.880224
-                    },
-                });
-
-                var image = 'images/maps-and-flags.png';
-                var beachMarker = new google.maps.Marker({
-                    position: {
-                        lat: 40.645037,
-                        lng: -73.880224
-                    },
-                    map: map,
-                    icon: image
-                });
-            }
-        </script>
-        <!-- google map js -->
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-        <!-- end google map js -->
-
+        
 
 
 </body>

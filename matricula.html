@@ -110,24 +110,22 @@
                                     <h2>Formulario de Matrícula</h2>
                                 </div>
                             </div>
+
+                
                             <div class="col-md-12">
-                                <input class=" contactus" placeholder="Fecha" type="DATE" name="Fecha">
+                                <label> Fecha Matricula*</label>
+                                <input class=" contactus" placeholder="Fecha" type="DATE" name="Fecha" id="fecha">
                             </div>
                             <div class="col-md-12">
                                 <label class=labelsign></label>
-                                <div class="nice-select"><span class="current">Tipo de Documento</span>
-                                    <ul class="list">
-                                        <li class="option" data-value="cc">CC</li>
-                                        <li class="option" data-value="ce">CE</li>
-                                        <li class="option" data-value="Otro">Otro</li>
-                                    </ul>
-                                </div>
+                            
+                                
                             </div>
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Documento" type="text" name="Documento">
+                                <input class="contactus" placeholder="Documento" type="text" name="Documento" id="documento">
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                <button class="send">Matricular</button>
+                                <button class="send" type="button" onclick="crearMatricula()" >Matricular</button>
                             </div>
                     </div>
                     </form>
@@ -268,6 +266,8 @@
         <!-- end google map js -->
 
 
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/js/matricula.js"></script>
 
 </body>
 
